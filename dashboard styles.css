@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+    min-height: 100vh;
+    color: white;
+    overflow-y: auto;
+}
+
+.nome {
+    padding: 0;
+    font-size: 40px;
+    text-align: center;
+    color: #00ff59;
+    font-style: italic;
+    font-family: "Dancing Script";
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+}
+
+.slogan {
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 205px;
+    height: 100%;
+    padding: 40px 10px 30px 10px;
+    overflow-y: auto;
+    background-color: rgb(20, 20, 20);
+    transition: all 0.35s;
+}
+
+.sidebar-header {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.logo-img {
+    width: 39px;
+    min-height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    margin-left: 10px;
+}
+
+.meu-perfil {
+    font-size: 18px;
+    border: 2;
+    font-family: "Poppins";
+    cursor: pointer;
+    text-align: left;
+    padding: 2px;
+    vertical-align: 40%;
+
+
+}
+
+
+
+.logo-img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    background: rgba(22, 194, 37, 0.616);
+}
+
+.sidebar button {
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    font-family: "Poppins";
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    padding: 2px;
+}
+
+.sidebar button>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.3s;
+}
+
+.sidebar button:hover>span {
+
+    background: rgba(22, 194, 37, 0.616);
+}
+
+.sidebar button i {
+    position: relative;
+    font-size: 28px;
+    transition: 0.2s;
+}
+
+.sidebar button span {
+    font-size: 15px;
+}
+
+.sidebar>nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1db954;
+    /* verde */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2b2a2a;
+}
+
+.main-content {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+hr.borda-horizontal-hr {
+    border: none;
+    /* Remove a borda padrão do navegador */
+    border-top: 1px solid #1db954;
+    /* Adiciona uma nova borda superior (a linha) */
+    margin: 5px 0;
+    /* Adiciona espaço acima e abaixo */
+    width: 100%;
+    /* Define a largura da linha (opcional) */
+    /* margin-left: auto; margin-right: auto; centraliza a linha se a largura for menor que 100% */
+}
+
+.borda-horizontal {
+    background-color: rgb(20, 20, 20);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+.main {
+    margin-left: 220px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.main h1 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Dancing Script';
+    font-style: italic;
+    font-size: 45px;
+    color: #00ff59;
+    font-weight: 600;
+    position: relative;
+    width: 100%;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+
+}
+
+.card {
+    background: #161616;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.card span {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.card h2 {
+    margin-top: 8px;
+    color: #22c55e;
+    /* verde MyFinance */
+}
+
+.transactions {
+    background: transparent;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    display: grid;
+    margin-left: 0;
+    margin-right: 0;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 16px;
+}
+
+.transaction {
+    background: #161616;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 12px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.transaction p {
+    margin-top: 8px;
+    color: #22c55e;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* Ajustando a sidebar com apenas os ícones */
+
+@media (width < 920px) {
+    .sidebar {
+        width: 72px;
+    }
+
+    .sidebar button>span {
+        width: 50px;
+    }
+
+    .sidebar button>span>span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .main {
+        transition: margin 0.4s;
+        margin-left: 78px;
+    }
+}
